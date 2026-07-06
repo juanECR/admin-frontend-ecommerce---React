@@ -1,0 +1,79 @@
+/* src/pages/Dashboard.css */
+
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  font-size: 1.75rem;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Grilla para las tarjetas de resumen */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Tarjeta individual */
+.kpi-card {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: var(--transition-soft);
+}
+
+.kpi-card:hover {
+  border-color: var(--border-medium);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Contenedor del ícono */
+.kpi-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Variaciones de color para los íconos (sutiles y minimalistas) */
+.kpi-icon.sales { background-color: #ecfdf5; color: #059669; }     /* Verde */
+.kpi-icon.orders { background-color: #fffbeb; color: #d97706; }    /* Naranja/Amarillo */
+.kpi-icon.products { background-color: #eff6ff; color: #2563eb; }  /* Azul */
+.kpi-icon.categories { background-color: #f3f4f6; color: #4b5563; } /* Gris */
+
+/* Textos de la tarjeta */
+.kpi-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kpi-title {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}

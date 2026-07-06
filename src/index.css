@@ -1,0 +1,74 @@
+/* Importamos una fuente moderna (Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Paleta de colores minimalista */
+  --bg-main: #ffffff;
+  --bg-secondary: #f9fafb;
+  
+  /* Líneas y bordes (Grises suaves) */
+  --border-light: #e5e7eb;
+  --border-medium: #d1d5db;
+  
+  /* Textos */
+  --text-primary: #111827; /* Casi negro */
+  --text-secondary: #6b7280; /* Gris para textos menos importantes */
+  
+  /* Acentos */
+  --accent-color: #000000; /* Botones principales */
+  --accent-hover: #374151; /* Negro más suave al pasar el mouse */
+  
+  /* Otros */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --transition-soft: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Efecto hover elegante */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Botón global minimalista */
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px); /* Elevación súper sutil */
+}
+
+/* Input global */
+.input-base {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  transition: var(--transition-soft);
+  outline: none;
+}
+
+.input-base:focus {
+  border-color: var(--accent-color);
+}
